@@ -2,15 +2,18 @@ package ru.netology.domain;
 
 public class Post {
     private int postId;
-    private String namePost;
-    private String textPost;
-    private int data;
-    private CommentsInfo commentsInfo;
+    private int userId;
+    private int fromId;
+    private String name;
+    private String text;
+    private String picture;
+    private int date;
     private LikesInfo likeInfo;
+    private CommentsInfo commentsInfo;
     private SharedInfo sharedInfo;
-    private ViewsInfo viewsInfo;
+    private ViewInfo viewsInfo;
     private MoreInfo moreInfo;
-
+    private String postType;
 
     public int getPostId() {
         return postId;
@@ -20,36 +23,52 @@ public class Post {
         this.postId = postId;
     }
 
-    public String getNamePost() {
-        return namePost;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setNamePost(String namePost) {
-        this.namePost = namePost;
+    public void setUserId(int UserId) {
+        this.userId = UserId;
     }
 
-    public String getTextPost() {
-        return textPost;
+    public int getFromId() {
+        return fromId;
     }
 
-    public void setTextPost(String textPost) {
-        this.textPost = textPost;
+    public void setFromId(int fromId) {
+        this.fromId = fromId;
     }
 
-    public int getData() {
-        return data;
+    public String getName() {
+        return name;
     }
 
-    public void setData(int data) {
-        this.data = data;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public CommentsInfo getCommentsInfo() {
-        return commentsInfo;
+    public String getText() {
+        return text;
     }
 
-    public void setCommentsInfo(CommentsInfo commentsInfo) {
-        this.commentsInfo = commentsInfo;
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public int getDate() {
+        return date;
+    }
+
+    public void setDate(int date) {
+        this.date = date;
     }
 
     public LikesInfo getLikeInfo() {
@@ -60,6 +79,14 @@ public class Post {
         this.likeInfo = likeInfo;
     }
 
+    public CommentsInfo getCommentsInfo() {
+        return commentsInfo;
+    }
+
+    public void setCommentsInfo(CommentsInfo commentsInfo) {
+        this.commentsInfo = commentsInfo;
+    }
+
     public SharedInfo getSharedInfo() {
         return sharedInfo;
     }
@@ -68,11 +95,11 @@ public class Post {
         this.sharedInfo = sharedInfo;
     }
 
-    public ViewsInfo getViewsInfo() {
+    public ViewInfo getViewsInfo() {
         return viewsInfo;
     }
 
-    public void setViewsInfo(ViewsInfo viewsInfo) {
+    public void setViewsInfo(ViewInfo viewsInfo) {
         this.viewsInfo = viewsInfo;
     }
 
@@ -82,5 +109,14 @@ public class Post {
 
     public void setMoreInfo(MoreInfo moreInfo) {
         this.moreInfo = moreInfo;
+    }
+
+
+    public String getPostType() {
+        return postType;
+    }
+
+    public void setPostType(String postType) {
+        this.postType = postType;
     }
 }
